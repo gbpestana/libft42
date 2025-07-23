@@ -6,7 +6,7 @@
 /*   By: grodrig2 <grodrig2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/21 20:30:07 by grodrig2          #+#    #+#             */
-/*   Updated: 2025/07/22 15:33:45 by grodrig2         ###   ########.fr       */
+/*   Updated: 2025/07/23 14:27:25 by grodrig2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,17 @@
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	unsigned char	*ptr;
-	size_t	i;
+	unsigned char	*ptr_src;
+	unsigned char	*ptr_dest;
 
-	ptr = (unsigned char *)dest;
-	i = 0;
-	while (i < n)
+	ptr_src = (unsigned char *)src;
+	ptr_dest = (unsigned char *)dest;
+	while (n > 0)
 	{
-		ptr[i] = (unsigned char *)src[i];
-		i++;
+		*ptr_dest = *ptr_src;
+		ptr_dest++;
+		ptr_src++;
+		n--;
 	}
 	return (dest);
 }
