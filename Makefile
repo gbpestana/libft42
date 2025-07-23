@@ -1,7 +1,5 @@
-NAME = libft.a
-FLAGS = -c -Wall -Wextra -Werror -I libft.h
 SRCS = ./libft00
-SRCS_C = $(SRCS)/ft_atoi.c \ 
+SRCS_C = $(SRCS)/ft_atoi.c \
 		$(SRCS)/ft_bzero.c \
 		$(SRCS)/ft_calloc.c \
 		$(SRCS)/ft_isalnum.c \
@@ -24,16 +22,23 @@ SRCS_C = $(SRCS)/ft_atoi.c \
 		$(SRCS)/ft_strrchr.c \
 		$(SRCS)/ft_tolower.c \
 		$(SRCS)/ft_toupper.c
+NAME = libft.a
+FLAGS = -Wall -Wextra -Werror
 
+OBJS = $(SRCS_C:.c=.o)
 
-all:
-	gcc $(FLAGS) $(SRCS_C)
-	ar rcs $(NAME) *.o
+all: $(NAME)
+
+$(NAME): $(OBJS)
+	ar rcs $(NAME) $(OBJS)
+
+$(SRCS)/%.o: $(SRCS)/%.c
+	gcc -c $(FLAGS) $< -o $@
 
 clean:
 	rm -f *.o
 
-fclean:
-	rm -f *.o $(NAME)
+fclean: clean
+	rm -f $(NAME)
 
 re: fclean all

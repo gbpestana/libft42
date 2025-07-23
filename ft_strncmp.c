@@ -6,7 +6,7 @@
 /*   By: grodrig2 <grodrig2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/22 10:51:46 by grodrig2          #+#    #+#             */
-/*   Updated: 2025/07/22 11:32:32 by grodrig2         ###   ########.fr       */
+/*   Updated: 2025/07/22 15:26:36 by grodrig2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	unsigned int	size;
+	size_t	size;
 
 	size = 0;
 	if (n > 0)
