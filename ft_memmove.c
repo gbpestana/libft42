@@ -6,13 +6,13 @@
 /*   By: grodrig2 <grodrig2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/22 16:43:26 by grodrig2          #+#    #+#             */
-/*   Updated: 2025/07/23 14:48:52 by grodrig2         ###   ########.fr       */
+/*   Updated: 2025/07/23 16:55:15 by grodrig2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*memmove(void *dest, const void *src, size_t n)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	size_t			i;
 	unsigned char	*ptr_src;

@@ -6,13 +6,13 @@
 /*   By: grodrig2 <grodrig2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/22 16:42:56 by grodrig2          #+#    #+#             */
-/*   Updated: 2025/07/23 14:45:20 by grodrig2         ###   ########.fr       */
+/*   Updated: 2025/07/23 16:55:49 by grodrig2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	memcmp(const void *s1, const void *s2, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	const unsigned char	*str1;
 	const unsigned char	*str2;
