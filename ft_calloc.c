@@ -1,13 +1,25 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: grodrig2 <grodrig2@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/22 16:40:31 by grodrig2          #+#    #+#             */
-/*   Updated: 2025/07/22 16:42:12 by grodrig2         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
+#include <stdlib.h>
 
 #include "libft.h"
+
+void	*ft_calloc(size_t nmemb, size_t size)
+{
+	size_t	i;
+	char	*ptr;
+
+	if (nmemb == 0 || size == 0)
+		{
+			ptr = malloc(1);
+			if (ptr != NULL)
+				*ptr = 0;
+			return (ptr);
+		}
+	ptr = malloc(nmemb * size);
+	if (ptr != NULL)
+	{
+		i = 0;
+		while (i < (nmemb * size))
+		ptr[i++] = 0;
+	}
+	return (ptr);
+}
